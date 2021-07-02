@@ -111,6 +111,57 @@ So lets split the task:
 - [ ] We need digest that data
 - [ ] We need to display the digested data
 
+Let's start by copying our first app to a new folder where we can work with ```cp -R first_app second_app``` Now, remember the path of our app has changed, so we need to run ```docker build -t node_test . && docker run -d -v $PWD/second_app:/app -p 3000:3000 --rm node_test```
+
+But first we need to edit our ```Dockerfile``` a little, as we are going to be using some modules as *request* so it needs to look like this
+
+```
+FROM node:14
+RUN npm install
+RUN npm install request
+WORKDIR /app 
+CMD node server.js
+```
+And we also need to edit our ```server.js``` to look like this:
+
+```
+var token_sting
+var request = require('request');
+
+request({
+  url: 'https://api.intra.42.fr/oauth/token',
+  method: 'POST',
+  auth: {
+    user: '*****',
+    pass: '*****'
+  },
+  form: {
+    'grant_type': 'client_credentials'
+  }
+}, function(err, res) {
+	var json = JSON.parse(res.body);
+	console.log("Access Token:", json.access_token);
+	token_sting = json.access_token
+});
+
+var http = require('http');
+
+function onRequest(request, response) {
+    response.writeHead(200, {'Content-Type': 'text/plain'});
+    response.write(token_sting);
+    response.end();
+}
+
+http.createServer(onRequest).listen(3000);
+
+
+
+```
+**Note**: Replace user and pass with UID and Secret.
+
+When you run this code, it should display your bearer token on your browser. Let's get some info then!
+
+
 # Step 5: prettifying things
 //TO-DO
 
