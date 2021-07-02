@@ -2,6 +2,8 @@
 
 ...or the story of what did I achieve during 4 hours of a test with a stack I don't know anything about
 
+**DISCLAIMER:** *As you can see, there is no code inside this repo, I really didn't know anything about Javascript, but i've made it this far, so please, take that into consideration.*
+
 ## Step 0: Freak out
 Freak out. Really, this is some stuff you don't know anyting about. You are doomed etc... Now, that's out of your system, so let's really begin with it.
 
@@ -161,6 +163,7 @@ http.createServer(onRequest).listen(3000);
 
 When you run this code, it should display your bearer token on your browser. Let's get some info then!
 
+We need to post a request to our API server passing our bearer token inside the header,
 
 # Step 5: prettifying things
 //TO-DO
