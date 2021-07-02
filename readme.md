@@ -2,7 +2,7 @@
 
 ...or the story of what did I achieve during 4 hours of a test with a stack I don't know anything about
 
-**DISCLAIMER:** *As you can see, there is no code inside this repo, I really didn't know anything about Javascript, but i've made it this far, so please, take that into consideration.*
+**DISCLAIMER:** *As you can see, there is no code inside this repo, I really didn't know anything about Javascript, but i've made it this far, even I achieve to generate my token bearer inside JS, so please, take that into consideration, and thanks for all the fish*
 
 ## Step 0: Freak out
 Freak out. Really, this is some stuff you don't know anyting about. You are doomed etc... Now, that's out of your system, so let's really begin with it.
