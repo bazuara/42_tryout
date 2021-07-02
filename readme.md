@@ -1,6 +1,6 @@
 # How to start learning javascript and node during a 42 level test...
 
-### ...or the story of what did I achieve during 4 hours of a test with a stack I don't know anything about
+...or the story of what did I achieve during 4 hours of a test with a stack I don't know anything about
 
 ## Step 0: Freak out
 Freak out. Really, this is some stuff you don't know anyting about. You are doomed etc... Now, that's out of your system, so let's really begin with it.
