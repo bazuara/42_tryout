@@ -101,5 +101,27 @@ We definetly need a way to parse it and process it, but we will figure it out.
 
 # Step 4: Javascirpt and the gathering of data
 
+This is the juicy part. We have a lot of things to consider. We need an "app" that can securely connect with 42 API, retrieves information, processes it and displays it, later we can figure out how to diplay beautiful things, I'm more of a plain-text guy, I hate CSS.
 
+So lets split the task:
 
+- [x] We need an "app" that renders content
+- [ ] We need to generate the bearer token inside our "app" 
+- [ ] We need to use that token to make a post call and pass our bearer inside the header
+- [ ] We need digest that data
+- [ ] We need to display the digested data
+
+# Step 5: prettifying things
+//TO-DO
+
+Let's put that css to work!
+
+# Step 6: Securing things
+//TO-DO
+
+* Scrap all of your auth strings and store them securely outisde your docker container, i.e: ```.env``` file
+
+# Step 7: Optimizing the app
+//TO-DO
+
+* Do a recollection of the number of calls made to the API and try to reduce them, if possible
